@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "creation": "2026-02-03 17:10:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "swiggy_section",
+  "enable_swiggy",
+  "swiggy_client_id",
+  "swiggy_client_secret",
+  "swiggy_merchant_id",
+  "column_break_swiggy",
+  "zomato_section",
+  "enable_zomato",
+  "zomato_client_id",
+  "zomato_client_secret",
+  "zomato_merchant_id",
+  "erpnext_settings_section",
+  "company",
+  "pos_profile",
+  "default_customer",
+  "default_warehouse",
+  "column_break_erpnext",
+  "sync_settings",
+  "auto_sync",
+  "sync_frequency",
+  "last_sync_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "swiggy_section",
+   "fieldtype": "Section Break",
+   "label": "Swiggy Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_swiggy",
+   "fieldtype": "Check",
+   "label": "Enable Swiggy Sync"
+  },
+  {
+   "depends_on": "eval:doc.enable_swiggy",
+   "fieldname": "swiggy_client_id",
+   "fieldtype": "Data",
+   "label": "Swiggy Client ID"
+  },
+  {
+   "depends_on": "eval:doc.enable_swiggy",
+   "fieldname": "swiggy_client_secret",
+   "fieldtype": "Password",
+   "label": "Swiggy Client Secret"
+  },
+  {
+   "depends_on": "eval:doc.enable_swiggy",
+   "fieldname": "swiggy_merchant_id",
+   "fieldtype": "Data",
+   "label": "Swiggy Merchant ID"
+  },
+  {
+   "fieldname": "column_break_swiggy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "zomato_section",
+   "fieldtype": "Section Break",
+   "label": "Zomato Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_zomato",
+   "fieldtype": "Check",
+   "label": "Enable Zomato Sync"
+  },
+  {
+   "depends_on": "eval:doc.enable_zomato",
+   "fieldname": "zomato_client_id",
+   "fieldtype": "Data",
+   "label": "Zomato Client ID"
+  },
+  {
+   "depends_on": "eval:doc.enable_zomato",
+   "fieldname": "zomato_client_secret",
+   "fieldtype": "Password",
+   "label": "Zomato Client Secret"
+  },
+  {
+   "depends_on": "eval:doc.enable_zomato",
+   "fieldname": "zomato_merchant_id",
+   "fieldtype": "Data",
+   "label": "Zomato Merchant ID"
+  },
+  {
+   "fieldname": "erpnext_settings_section",
+   "fieldtype": "Section Break",
+   "label": "ERPNext POS Settings"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pos_profile",
+   "fieldtype": "Link",
+   "label": "POS Profile",
+   "options": "POS Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_customer",
+   "fieldtype": "Link",
+   "label": "Default Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_erpnext",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sync_settings",
+   "fieldtype": "Section Break",
+   "label": "Sync Settings"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_sync",
+   "fieldtype": "Check",
+   "label": "Auto Sync"
+  },
+  {
+   "default": "60",
+   "description": "In minutes",
+   "fieldname": "sync_frequency",
+   "fieldtype": "Int",
+   "label": "Sync Frequency"
+  },
+  {
+   "fieldname": "last_sync_time",
+   "fieldtype": "Datetime",
+   "label": "Last Sync Time",
+   "read_only": 1
+  }
+ ],
+ "issingle": 1,
+ "modified": "2026-02-03 17:10:00.000000",
+ "modified_by": "Administrator",
+ "module": "Swiggy Zomato Sync",
+ "name": "Swiggy Zomato Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
