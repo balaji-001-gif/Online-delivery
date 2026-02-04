@@ -1,7 +1,7 @@
 import frappe
 from frappe import _
-from swiggy_zomato_sync.swiggy_zomato_sync.connectors.swiggy_connector import SwiggyConnector
-from swiggy_zomato_sync.swiggy_zomato_sync.connectors.zomato_connector import ZomatoConnector
+from swiggy_zomato_sync.connectors.swiggy_connector import SwiggyConnector
+from swiggy_zomato_sync.connectors.zomato_connector import ZomatoConnector
 import json
 
 @frappe.whitelist()

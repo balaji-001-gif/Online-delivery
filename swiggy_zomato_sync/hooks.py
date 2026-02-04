@@ -10,7 +10,7 @@ app_license = "mit"
 
 scheduler_events = {
     "all": [
-        "swiggy_zomato_sync.swiggy_zomato_sync.api.sync_orders"
+        "swiggy_zomato_sync.api.sync_orders"
     ],
     "daily": [
         # You could add daily cleanup jobs here
